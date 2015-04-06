@@ -20,7 +20,7 @@ def process_request(request):
     items = hmod.Rented_Item.objects.all()
     print(items)
     overdueitems = hmod.Rented_Item.objects.exclude(date_in__isnull=False)
-    print(11111111111111)
+    print(111111111111111)
     print(overdueitems)
     print(22222222222222)
     template_vars['sixty'] = []
