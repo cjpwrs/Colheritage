@@ -1,0 +1,199 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 36px 0;
+  text-align: center;
+  font-size: 2.5em;
+  color: #F4F4F4;
+  background-color: #0088CC;
+}  
+
+#sideBar{
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #0088CC;
+	padding-bottom: 500px;
+}
+
+
+footer{
+	text-align: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  padding: 36px;
+  font-size: 2.5em;
+  color: #F4F4F4;
+  background-color: #0088CC;
+}  
+
+#headerImage{
+  position: relative;
+  width:130px;
+  height:2px;
+  bottom: 30px;
+  left: 0px;
+}
+
+.headerTitle{
+    text-align: center;
+}
+
+#subHeaderTitle{
+  position: absolute;
+  left:600px;
+  top:73px;
+}
+
+#login{
+  float: right;
+  margin-right: 30px;
+  margin-top: -70px;
+  font-size: 20px;
+}
+
+
+footer{
+  text-align: center;
+}
+
+#sideBar{
+  font-size: 24px;
+  padding-bottom: 800px;
+  border-right:solid;
+  border-right-color: #0088CC;
+}
+
+#adminPage{
+  font-size: 24px;
+  
+}
+
+#loginContainer{
+  position:absolute;
+  width: 600px;
+  height: 500px;
+  left:250px;
+  top:100px;
+  text-align: center;
+}
+
+#stateDrop{
+  position:relative;
+  bottom:11px;
+}
+
+#positionRegisterForm{
+  position: relative;
+  top:20px;
+}
+
+#btnDeleteUsers{
+  float:right;
+}
+
+#btnDeleteEvents{
+  float:right;
+}
+
+
+#tableImage{
+  width:140px;
+  height: 140px;
+}
+
+#storeItem{
+  text-align: center;
+}
+
+#btnRentals{
+  float:right;
+}
+
+#btnStore{
+  float:right;
+}
+#massItemLabel{
+  position:relative;
+  top:28px;
+}
+
+.item_container{
+  display: inline-block;
+  border: 1px solid#CCC;
+  border-radius: 4px;
+  margin: 12px;
+  padding:5px;
+  max-width: 200px;
+}
+
+.item_container > a > img  {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.area_container > img  {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.area_container{
+  display: inline-block;
+  border: 1px solid#CCC;
+  border-radius: 4px;
+  margin: 12px;
+  padding:5px;
+}
+
+.imageCenter{
+  text-align: center;
+}
+
+input[type=Number]{
+  width:50px;
+}
+
+.form-control{
+  width:30%;
+}
+
+.verticalCenter{
+  position: relative;
+  left:20%;
+  bottom:0px;
+}
+
+#checkoutButton{
+  position: relative;
+  left: 450px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

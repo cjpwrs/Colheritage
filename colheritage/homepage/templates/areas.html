@@ -1,0 +1,21 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+    ##search Product Items
+    <br>
+    <div class="text-right">
+
+    </div>
+    <%
+
+    %>
+    %for Area in Areas:
+    	<div class="area_container">
+    	    <img class="" src="${STATIC_URL}${Area.image}" />
+    	    <div class="text-muted text-center areaName"><strong>${ Area.name }</strong></div>
+    	    <div class="text-muted text-center">${ Area.description }</div>
+
+
+    	</div>
+    %endfor
+</%block>

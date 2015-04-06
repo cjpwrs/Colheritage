@@ -1,0 +1,18 @@
+<%inherit file="base.htm" />
+<%block name="content">
+    <h1>Checkout</h1>
+    %if user.is_authenticated() :
+    <form method="POST">
+    <table>
+    ${ form }
+    </table>
+    <br>
+    <a href= "/homepage/receipt.email/"><button type="submit" class="btn btn-primary">Purchase</button><a>
+    </form>
+
+    %else:
+    <div id="login">
+    <strong>You will need to login first in order to checkout, thank you.</strong>
+    </div>
+    %endif
+</%block>

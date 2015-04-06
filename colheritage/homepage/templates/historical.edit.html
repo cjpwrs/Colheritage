@@ -1,0 +1,12 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+	<form method="POST">
+	<table>	
+		${ form }
+	</table>
+	<button type="submit" class="btn btn-primary">Submit</button>
+	<a href="/homepage/historical.delete/${ historicalFigure.id }/">Delete a Historical Figure</a>
+	</form>
+</%block>

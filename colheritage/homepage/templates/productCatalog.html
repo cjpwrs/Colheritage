@@ -1,0 +1,41 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+    ##search Product Items
+    <br>
+    <div class="text-right">
+        Search Products: <input type="search" id="searchProducts">
+    </div>
+    <%
+
+    %>
+    <h1>Products for Purchase</h1>
+    %for Product in Products:
+    	<div class="item_container">
+    	<a href="/homepage/details/${ Product.id }/">
+    	<img class="" src="${STATIC_URL}${Product.image}" />
+    	<div class="text-muted text-center productName">${ Product.name }</div>
+    	<div class="text-muted text-center">${ Product.currentPrice }</div>
+    	</a>
+    		<div class="text-right">
+            Qty: <input type="number" class="qty" name="qty" value="1">
+    		  <button data-pid="${ Product.id }" class="add_button btn btn-xs btn-warning">Add to Cart</button>
+    		</div>
+    	</div>
+    %endfor
+
+    <h1>Products for Rental</h1>
+     %for Product in RProducts:
+            <div class="item_container">
+            <a href="/homepage/details/${ Product.id }/">
+            <img class="" src="${STATIC_URL}${Product.image}" />
+            <div class="text-muted text-center productName">${ Product.name }</div>
+            <div class="text-muted text-center">${ Product.currentPrice }</div>
+            </a>
+                <div class="text-right">
+                Days: <input type="number" class="qty" name="qty" value="1">
+                  <button data-pid="${ Product.id }" class="add_button btn btn-xs btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        %endfor
+</%block>

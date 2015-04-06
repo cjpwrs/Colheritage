@@ -1,0 +1,87 @@
+## this is the skeleton of all pages on in this app - it defines the basic html tags
+
+## set up a StaticRenderer object to enable the CSS/JS automatic inclusion magic.
+<%! from django_mako_plus.controller import static_files %>
+<%  static_renderer = static_files.StaticRenderer(self) %>
+
+<!DOCTYPE html>
+<html>
+
+  <meta name="description" content="The colonial heritage foundation is a foundation whose main goal is to enrich the american people with the great history of this county">
+  <meta name="keywords" content="colonial, heritage, foundation, festival, fun, free, Utah">
+  <meta charset="UTF-8">
+  <head>
+    
+    <title>Colonial Heritage Foundation</title>
+    
+    ## add any site-wide scripts or CSS here; for example, jquery:
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <script src="${ STATIC_URL }homepage/media/jquery.form.js"></script>
+    <script src="${ STATIC_URL }homepage/media/jquery.loadmodal.js"></script>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="icon" type="image/ico" href="/static/homepage/media/favicon.ico">
+  
+    ## render the css with the same name as this page
+    ${ static_renderer.get_template_css(request, context)  }
+  
+  </head>
+  <body>
+
+    <header>
+      <div id="headerImage"><img src="/static/homepage/media/Meet_history.jpg" class="img-responsive" alt="Responsive image"></div>
+      <div class="headerTitle"> The Colonial Heritage Foundation<div id="subHeaderTitle"><h4>"Meet History Face to Face"</h4></div></div>
+      <div id="login">
+
+        <div class="pull-right">
+          %if request.user.is_authenticated():
+            Welcome, ${ request.user.get_full_name() }
+            <a href="http://localhost:8000/homepage/logout"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout</button></a>
+          %else:
+            <button id="show_login_dialog" class="btn btn-success">Login Here</button>
+          %endif
+        </div>
+
+    </header>
+  
+
+  <div class="row">
+    <div class="col-md-2" id="sideBar">
+      <p><a href="/homepage/index/" id="sideBar">Home</a><span class="glyphicon glyphicon-home" aria-hidden="true"></span></p>
+      <p><a href="/homepage/events.upcoming/" id="sideBar">Upcoming Events</a>
+      <p><a href="/homepage/productCatalog/" id="sideBar">Store</a>
+      <p><a href="/homepage/adminCrud/" id="sideBar">Admin Pages</a>
+
+    </div>
+    <div class="col-md-8">
+      <%block name="content">
+        Site content goes here in sub-templates.
+      </%block> 
+    </div>
+  </div>
+
+
+
+  <footer>
+    CJ Powers - Group 2-4
+  </footer>
+
+
+  
+
+
+
+  
+    ## render the JS with the same name as this page
+    ${ static_renderer.get_template_js(request, context)  }
+  
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+	
+	<div class="clearfix"></div>
+	<div class="text-right">
+		<a href="/homepage/items.create/" class="btn btn-primary">Create a New Item </a>
+	</div>
+
+	<table class="table table-striped table-bordered">
+			<tr>
+				<th>ID</th>
+				<th>Item Name</th>
+				<th>Description</th>
+				<th>Value</th>
+				<th>Standard Rental Price</th>
+				<th>Actions</th>
+			</tr>
+		%for item in Items:
+			<tr>
+				<td>${ item.id }</td>
+				<td>${ item.name }</td>
+				<td>${ item.description }</td>
+				<td>${ item.value }</td>
+				<td>${ item.standardRentalPrice }</td>
+				<td><a href="/homepage/items.edit/${ item.id }/" class="btn btn-xs btn-default">Edit </a></td>
+			</tr>
+		%endfor
+	</table>
+
+</%block>

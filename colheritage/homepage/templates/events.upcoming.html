@@ -1,0 +1,27 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+	
+	<div class="clearfix"></div>
+
+
+<title>Upcoming Events</title>
+<h1>Upcoming Events</h1>
+
+    %for event in Events:
+	    <div class="eventblock">
+
+				<h1>${ event.name }</h1>
+                <img src="/static/homepage/media/events/boston.jpg" class="eventimage" alt="Boston"
+				<div class = "eventbody">
+                    <br><strong>Description:</strong>${ event.description }
+				    <br><strong>When: </strong>${ event.startDate }
+                    <br><strong>Where: </strong><a href="${ event.mapURL }" class="btn btn-primary">Map </a>
+                    <br><a href="/homepage/areas/" class="btn btn-primary">Click here to explore the areas at this event </a>
+                    <br><a href="/homepage/artisanCatalog/" class="btn btn-primary">Click here to see artisan products that will be at the event </a>
+                </div>
+        </div>
+    %endfor
+
+
+</%block>
