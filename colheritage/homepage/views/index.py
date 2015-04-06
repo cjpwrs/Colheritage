@@ -16,7 +16,7 @@ def process_request(request):
     return templater.render_to_response(request, 'index.html', params)
 
 
-#@view_function
+##@view_function
 #def loginform(request):
 #    params = {}
 
