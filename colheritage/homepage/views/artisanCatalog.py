@@ -16,4 +16,4 @@ def process_request(request):
 
 	params['Products'] = Products
 	return templater.render_to_response(request, 'artisanCatalog.html', params)
-#Changes
+#Changes More
