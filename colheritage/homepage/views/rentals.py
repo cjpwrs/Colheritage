@@ -89,7 +89,7 @@ def create(request):
 
     return HttpResponseRedirect('/homepage/rentals.edit/{}'.format(rental.id))
 
-#####################################################
+###################################################
 ########  Delete a User
 @view_function
 def delete(request):
