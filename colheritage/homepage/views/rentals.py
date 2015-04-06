@@ -14,7 +14,7 @@ from .. import dmp_render, dmp_render_to_response
 templater = get_renderer('homepage')
 
 
-######################################################
+####################################################
 ###### Shows the list of Events
 
 @view_function
