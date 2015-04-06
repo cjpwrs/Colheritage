@@ -18,7 +18,7 @@ templater = get_renderer('homepage')
 def process_request(request):
     template_vars = {}
 
-    # get the items in the shopping cart in an ajax ($.loadmodal) dialog
+    # get the items in the shopping cart in an ajax ($.loadmodal) dialogg
 
     cart_Products = {}
 
